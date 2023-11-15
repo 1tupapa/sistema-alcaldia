@@ -1,10 +1,9 @@
-import { Login } from "./ui/Login";
+import { Login } from "@/ui/Login";
 
 
-export default function Home() {
-  return (
-
-    <Login />
-
-  )}
+export default function LoginPage() {
+    return (
+      <Login />
+    )
+  }
     
