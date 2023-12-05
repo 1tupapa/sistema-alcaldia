@@ -20,7 +20,7 @@ const links = [
     
       {
         name: 'Inventario',
-        href: '/home/transacciones',
+        href: '/home/inventario',
         icon: UserIcon,
       },
     ];

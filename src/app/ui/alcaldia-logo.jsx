@@ -12,6 +12,7 @@ export default function AlcaldiaLogo() {
           width={160}
           height={160}
           className="hidden md:block"
+          priority
           />
       </div> 
     )
