@@ -1,9 +1,10 @@
 'use client';
 
-import { Icons } from "@/plugins/Icons";
+import { Icons } from "@/app/plugins/Icons";
 import Image from "next/image";
 import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
+import { fonts } from "./Fonts";
 
 export const LoginForm = () => {
 
@@ -35,7 +36,7 @@ export const LoginForm = () => {
             <div className="relative">
                 <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-lg" />
                 <input 
-                    className={`${inputStyle}`}  
+                    className={`${fonts.inter.className, inputStyle}`}  
                     type="email" placeholder="Ingrese su Usuario" 
                 />
             </div>
@@ -57,18 +58,13 @@ export const LoginForm = () => {
                 </button>
             </label>
             <Link
-                className="bg-blue-950 text-center text-white rounded-lg p-2 text-sm font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-200" 
+                className={`${ fonts.inter.className } bg-blue-950 text-center text-white rounded-lg p-2 text-sm font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-200`} 
                 type="submit"
                 href='/home' 
+
             >
                 Iniciar Sesion
             </Link>
-            <button 
-                className="bg-red-700 text-center text-white rounded-lg p-2 text-sm font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-red-600 duration-200"
-                onClick={ () => signIn('google') }
-            >
-                Google
-            </button>
         </form>
     </div>
 </main>

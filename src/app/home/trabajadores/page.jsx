@@ -1,6 +1,9 @@
+import CreateForm from "@/app/ui/trabajadores/create-form";
 
 export default function TrabPage() {
     return (
-      <h1>Hola soy la pagina de trabajadores</h1>
+      <main>
+        <CreateForm />
+      </main>
     )}
       

@@ -1,4 +1,4 @@
-import { Login } from "@/ui/Login";
+import { Login } from "@/app/ui/Login";
 
 
 export default function LoginPage() {
