@@ -1,9 +1,13 @@
+'use client';
+
 import { Icons } from "@/plugins/Icons";
 import Image from "next/image";
+import Link from "next/link";
+import { signIn, useSession } from "next-auth/react";
 
 export const LoginForm = () => {
 
-    const inputStyle = "rounded-2xl py-5 px-2 pl-8 bg-zinc-300 text-sm border-2 border-zinc-500/40 h-8 w-full"
+    const inputStyle = "rounded-2xl py-5 px-2 pl-8 bg-zinc-300 hover:bg-zinc-200 focus:bg-zinc-200 text-sm border-2 border-zinc-500/40 h-8 w-full"
 
     const { UserIcon, LockIcon } = Icons;
 
@@ -27,7 +31,6 @@ export const LoginForm = () => {
                 height={150}
                 className="mx-auto absolute -top-14 left-1/2 transform -translate-x-1/2"
             />
-            {/* <h1 className="text-center text-2xl font-bold text-red-950">Iniciar Sesion</h1> */}
 
             <div className="relative">
                 <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-lg" />
@@ -53,11 +56,18 @@ export const LoginForm = () => {
                     <a href="#" className="text-sm text-blue-950 hover:text-blue-900">¿Olvido su contraseña?</a>
                 </button>
             </label>
-            <button 
-                className="bg-blue-950 text-white rounded-lg p-2 text-sm font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-200 " 
+            <Link
+                className="bg-blue-950 text-center text-white rounded-lg p-2 text-sm font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-200" 
                 type="submit"
+                href='/home' 
             >
                 Iniciar Sesion
+            </Link>
+            <button 
+                className="bg-red-700 text-center text-white rounded-lg p-2 text-sm font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-red-600 duration-200"
+                onClick={ () => signIn('google') }
+            >
+                Google
             </button>
         </form>
     </div>
