@@ -6,11 +6,11 @@ import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
 import { fonts } from "./Fonts";
 
+const inputStyle = "rounded-2xl py-5 px-2 pl-8 bg-zinc-300 hover:bg-zinc-200 focus:bg-zinc-200 text-sm border-2 border-zinc-500/40 h-8 w-full"
+
+const { UserIcon, LockIcon } = Icons;
+
 export const LoginForm = () => {
-
-    const inputStyle = "rounded-2xl py-5 px-2 pl-8 bg-zinc-300 hover:bg-zinc-200 focus:bg-zinc-200 text-sm border-2 border-zinc-500/40 h-8 w-full"
-
-    const { UserIcon, LockIcon } = Icons;
 
   return (
     <main 
@@ -57,14 +57,12 @@ export const LoginForm = () => {
                     <a href="#" className="text-sm text-blue-950 hover:text-blue-900">¿Olvido su contraseña?</a>
                 </button>
             </label>
-            <Link
+            <button
                 className={`${ fonts.inter.className } bg-blue-950 text-center text-white rounded-lg p-2 text-sm font-bold transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-blue-900 duration-200`} 
                 type="submit"
-                href='/home' 
-
             >
                 Iniciar Sesion
-            </Link>
+            </button>
         </form>
     </div>
 </main>

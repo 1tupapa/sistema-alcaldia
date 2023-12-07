@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { DeleteRegister, UpdateRegister } from "./buttons";
 
 export default function Table() {
 
@@ -92,13 +93,10 @@ export default function Table() {
                   <td className="whitespace-nowrap px-3 py-3">
                     Camioneta {/*invoice.vehicleType*/}
                   </td>
-                  <td className="whitespace-nowrap px-3 py-3">
-                    {/* <InvoiceStatus status={invoice.status} /> */}
-                  </td>
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex justify-end gap-3">
-                      {/* <UpdateInvoice id={invoice.id} />
-                      <DeleteInvoice id={invoice.id} /> */}
+                      <UpdateRegister /> {/*id={invoice.id}*/}
+                      <DeleteRegister /> {/*id={invoice.id}*/}
                     </div>
                   </td>
                 </tr>

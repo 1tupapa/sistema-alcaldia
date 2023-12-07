@@ -1,5 +1,5 @@
 import { fonts } from "@/app/ui/Fonts";
-import Table from "@/app/ui/inventario/table";
+import Table from "@/app/ui/registros/table";
 import Search from "@/app/ui/search";
 import { Suspense } from "react";
 
@@ -12,7 +12,7 @@ export default function TransPage() {
   return (
     <div className="w-full">
     <div className="flex w-full items-center justify-between">
-      <h1 className={`${fonts.lusitana.className} text-3xl`}>Total de <span className="text-red-700 font-bold">registros</span> realizados</h1>
+      <h1 className={`${fonts.inter.className} text-2xl`}>Total de <span className="text-red-700 font-bold">registros</span> realizados</h1>
     </div>
     <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
       <Search placeholder="Busca un reporte..." />
