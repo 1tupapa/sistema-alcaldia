@@ -3,7 +3,7 @@ import { Icons } from "@/app/plugins/Icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const { HostIcon, WorkerIcon, UserIcon } = Icons;
+const { HostIcon, InvoiceIcon, UserIcon, WorkerIcon } = Icons;
 
 const links = [
     { 
@@ -13,16 +13,21 @@ const links = [
       },
     
       { 
-        name: 'Caja', 
-        href: '/home/trabajadores', 
+        name: 'Registros', 
+        href: '/home/registrar', 
         icon: WorkerIcon 
       },
     
       {
-        name: 'Inventario',
-        href: '/home/inventario',
-        icon: UserIcon,
+        name: 'Lista de registros',
+        href: '/home/registros',
+        icon: InvoiceIcon
       },
+      {
+        name: 'Usuarios',
+        href: '/home/usuarios',
+        icon: UserIcon
+      }
     ];
 
 export default function NavLinks() {

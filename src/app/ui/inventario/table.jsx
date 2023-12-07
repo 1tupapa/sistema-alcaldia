@@ -43,7 +43,10 @@ export default function Table() {
                   Trabajador
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Cantidad
+                  Gasolina
+                </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Tipo de gasolina
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
                   Fecha
@@ -52,8 +55,12 @@ export default function Table() {
                   Autorizado
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  
+                  Placa
                 </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Tipo de vehiculo
+                </th>
+                
                 <th scope="col" className="relative py-3 pl-6 pr-3">
                   <span className="sr-only">Edit</span>
                 </th>
@@ -62,29 +69,28 @@ export default function Table() {
             <tbody className="bg-white">
               {/* {invoices?.map((invoice) => ( */}
                 <tr
-                  key={invoice.id}
                   className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
                 >
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
-                    <div className="flex items-center gap-3">
-                      <Image
-                        alt={`${invoice.name}'s profile picture`}
-                        src={invoice.image_url}
-                        className="rounded-full"
-                        width={28}
-                        height={28}
-                      />
-                      <p>{invoice.name}</p>
-                    </div>
+                    Luis Alberto Zoza Ochoa {/*invoice.name*/}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    {invoice.email}
+                    20 {/*invoice.amount*/}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    {formatCurrency(invoice.amount)}
+                    Diseal {/*invoice.type*/}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    {formatDateToLocal(invoice.date)}
+                    12-12-2023 {/*formatDateToLocal(invoice.date)*/}
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-3">
+                    Luis enrique Florez Dias {/*invoice.authorized*/}
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-3">
+                    CH-4102-M {/*invoice.plate*/}
+                  </td>
+                  <td className="whitespace-nowrap px-3 py-3">
+                    Camioneta {/*invoice.vehicleType*/}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
                     {/* <InvoiceStatus status={invoice.status} /> */}

@@ -1,9 +1,10 @@
 import {  CiLock  } from "react-icons/ci";
 import { GrHostMaintenance, GrUserWorker, GrPower, GrLicense } from "react-icons/gr";
-import { FaRegUser, FaHeadSideVirus, FaCarAlt } from "react-icons/fa";
+import { FaRegUser, FaHeadSideVirus, FaCarAlt, FaSearch } from "react-icons/fa";
 import { CgDollar } from "react-icons/cg";
 import { BsFillFuelPumpFill, BsCalendarDateFill } from "react-icons/bs";
 import { MdMergeType } from "react-icons/md";
+import { TbFileInvoice } from "react-icons/tb";
 
 export const UserIcon = FaRegUser ;
 export const LockIcon = CiLock ;
@@ -17,6 +18,8 @@ export const VirusIcon = FaHeadSideVirus;
 export const LicenseIcon = GrLicense;
 export const TypeIcon = MdMergeType;
 export const CarIcon = FaCarAlt;
+export const InvoiceIcon = TbFileInvoice;
+export const SearchIcon = FaSearch;
 
 export const Icons = {
     UserIcon,
@@ -31,4 +34,6 @@ export const Icons = {
     LicenseIcon,
     TypeIcon,
     CarIcon,
+    InvoiceIcon,
+    SearchIcon,
 };
